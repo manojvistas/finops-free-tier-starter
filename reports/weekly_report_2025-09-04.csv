@@ -1,0 +1,16 @@
+# Daily Totals
+date,cost_usd
+2025-08-29,0.0
+2025-08-30,0.0
+2025-08-31,0.0
+2025-09-03,0.0
+
+# Top Services
+service,cost_usd
+EC2 - Other,1e-06
+Amazon Virtual Private Cloud,0.0
+Amazon Simple Storage Service,0.0
+Amazon Elastic Compute Cloud - Compute,0.0
+
+# Alerts
+date,service,usage_type,severity,message

@@ -1,0 +1,49 @@
+# Edit the thresholds below to match your free-tier limits and units exactly as Cost Explorer reports them.
+thresholds:
+  - service: "AWS Lambda"
+    usage_type: "Requests"
+    metric: "usage"
+    unit: "Requests"
+    monthly_limit: 1000000
+    warning_ratio: 0.8
+    critical_ratio: 1.0
+
+  - service: "AWS Lambda"
+    usage_type: "Lambda-GB-Second"
+    metric: "usage"
+    unit: "GB-Seconds"
+    monthly_limit: 400000
+    warning_ratio: 0.8
+    critical_ratio: 1.0
+
+  - service: "Amazon S3"
+    usage_type: "TimedStorage-ByteHrs"   # verify this usage type + unit in your data
+    metric: "usage"
+    unit: "ByteHrs"
+    monthly_limit: 5000000000            # adjust to reflect ~5 GB-month
+    warning_ratio: 0.8
+    critical_ratio: 1.0
+
+  - service: "Amazon S3"
+    usage_type: "Requests-Tier1"         # e.g., GET; verify in your data
+    metric: "usage"
+    unit: "Requests"
+    monthly_limit: 20000
+    warning_ratio: 0.8
+    critical_ratio: 1.0
+
+  - service: "Amazon S3"
+    usage_type: "Requests-Tier2"         # e.g., PUT/COPY/POST/LIST; verify in your data
+    metric: "usage"
+    unit: "Requests"
+    monthly_limit: 2000
+    warning_ratio: 0.8
+    critical_ratio: 1.0
+
+  - service: "All Services"
+    usage_type: null
+    metric: "cost"
+    unit: "USD"
+    monthly_limit: 1.00                   # global monthly cost guardrail
+    warning_ratio: 0.5
+    critical_ratio: 1.0
